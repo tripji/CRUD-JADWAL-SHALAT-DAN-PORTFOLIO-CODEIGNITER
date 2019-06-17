@@ -1,0 +1,70 @@
+<!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin'); ?>">
+        <div class="sidebar-brand-text mx-3">Panel Admin</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" class="<?php echo activate_menu('admin') ?>" href="<?php echo site_url('admin'); ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item - Jadwal Salat -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseJadwal" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Jadwal Shalat</span>
+        </a>
+        <div id="collapseJadwal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="<?php echo site_url('jadwal'); ?>">Tabel Jadwal</a>
+            <a class="collapse-item" href="<?php echo site_url('jadwal/tambah'); ?>">Form Tambah</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-table"></i>
+          <span>User</span>
+        </a>
+        <div id="collapseUser" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item <?php echo activate_menu('user'); ?>" href="<?php echo site_url('admin/user'); ?>">Tabel User</a>
+            <a class="collapse-item" href="<?php echo site_url('user/tambah'); ?>">Form Tambah</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item <?php echo activate_menu('admin/about') ?>">
+        <a class="nav-link" href="<?php echo site_url('admin/about'); ?>">
+          <span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo site_url('login/logout'); ?>">
+          <span>Logout</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
